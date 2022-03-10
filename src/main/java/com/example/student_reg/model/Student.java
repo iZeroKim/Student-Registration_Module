@@ -11,20 +11,25 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
+/**
+ * The above annotations generate getters and setters for the class's fields and
+ * a default no arguments constructor and another constructor that takes all fields as parameters
+ * */
 @Entity
 @Table(name = "students")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
 
     @Column(name = "first_name")
-    String firstname;
+    private String firstname;
 
     @Column(name = "last_name")
-    String lastname;
-    String   email;
-    String gender;
-    int age;
+    private String lastname;
+    private String email;
+    private String gender;
+    private int age;
 }
